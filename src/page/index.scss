@@ -1,0 +1,19 @@
+@import "../shared/styles/variables";
+
+.index-page {
+  width: 40%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 40px auto;
+  min-width: 260px;
+  header {
+    display: flex;
+    background-color: #d5cbdd;
+    justify-content: space-between;
+  }
+  .start-modal {
+    button {
+      cursor: pointer;
+    }
+  }
+}

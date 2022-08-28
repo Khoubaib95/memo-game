@@ -1,0 +1,26 @@
+@import "../../shared/styles/variables.scss";
+
+.card {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+  margin: 4px;
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .cover {
+    background-color: #4f0097;
+    cursor: pointer;
+  }
+  .image {
+    background-color: $white;
+    img {
+      width: 80%;
+    }
+  }
+}

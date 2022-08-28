@@ -1,0 +1,39 @@
+@import "../../shared/styles/variables.scss";
+
+.disable-scroll {
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  inset: 0px;
+  background-color: $modal-mask-color;
+  z-index: 99;
+}
+.modal-content {
+  position: relative;
+  background-color: $white;
+  padding: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .close-modal {
+    position: absolute;
+    height: 23px;
+    right: 3px;
+    top: 3px;
+    color: $black;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    &:hover {
+      background-color: #c1c1c166;
+    }
+  }
+  h3 {
+    color: $white;
+    margin-top: 0 !important;
+  }
+}

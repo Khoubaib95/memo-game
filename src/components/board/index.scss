@@ -1,0 +1,13 @@
+@import "../../shared/styles/variables.scss";
+
+.board {
+  background-color: #eee6ee;
+  padding: 20px;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    grid-row-gap: 15px;
+    margin: 20px 0 0;
+    justify-content: center;
+  }
+}
