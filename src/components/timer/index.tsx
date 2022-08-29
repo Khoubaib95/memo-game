@@ -2,15 +2,20 @@ import { useState, useEffect } from "react";
 import "./index.scss";
 let timer: any;
 
-function Timer({ startTimer }: any) {
-  //const [startTimer, setStartTimer] = useState<boolean>(false);
-  const [seconds, setSeconds] = useState<number>(0);
-  const [minutes, setMinutes] = useState<number>(0);
-  const [hours, setHours] = useState<number>(0);
-
+function Timer({
+  startTimer,
+  hours,
+  minutes,
+  seconds,
+  setMinutes,
+  setSeconds,
+  setHours,
+  isGameOver,
+}: any) {
   useEffect(() => {
     if (startTimer) {
       timer = setInterval(() => {
+        console.log("startTimer");
         setSeconds(seconds + 1);
 
         if (seconds === 59) {

@@ -1,1 +1,8 @@
-@import "../shared/styles/variables.scss;
+@import "../../shared/styles/variables.scss";
+
+.shape {
+  background-color: $white;
+  img {
+    width: 80%;
+  }
+}

@@ -1,5 +1,11 @@
 @import "../../shared/styles/variables.scss";
 
+.game-over-modal {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .board {
   background-color: #eee6ee;
   padding: 20px;

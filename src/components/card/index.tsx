@@ -1,3 +1,5 @@
+import Shape from "../shape";
+import { CardType } from "../../@types/type";
 import "./index.scss";
 
 function Card({
@@ -7,7 +9,10 @@ function Card({
   setCards,
   setCurrentCard,
   cards,
-}: any) {
+}:
+  | { card: CardType; setLastSelected: any; setCards: any; setCurrentCard: any }
+  | any) {
+  /* ******************************** RENDERING ******************************* */
   return (
     <div
       className="card"
@@ -21,9 +26,7 @@ function Card({
       }}
     >
       <div className="cover" style={{ zIndex: card.isOpen ? 0 : 1 }}></div>
-      <div className="image">
-        <img src={card.src} alt="circle" style={{ width: "100%" }} />
-      </div>
+      <Shape src={card.src} alt={card.type} />
     </div>
   );
 }
