@@ -4,6 +4,9 @@
   .content {
     display: flex;
     flex-direction: column;
+    button: {
+      cursor: pointer;
+    }
   }
 }
 .board {

@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { timerPropType } from "./types";
 import "./index.scss";
+
 let timer: any;
 
 function Timer({
@@ -10,8 +12,7 @@ function Timer({
   setMinutes,
   setSeconds,
   setHours,
-  isGameOver,
-}: any) {
+}: timerPropType) {
   useEffect(() => {
     if (startTimer) {
       timer = setInterval(() => {
@@ -32,6 +33,7 @@ function Timer({
     return () => clearInterval(timer);
   });
 
+  /* ******************************** RENDERING ******************************* */
   return (
     <span className="timer">
       {hours < 10 ? `0${hours}` : hours}:

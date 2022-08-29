@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Moves from "../components/moves";
 import Timer from "../components/timer";
 import Board from "../components/board";
@@ -18,7 +18,7 @@ function IndexPage() {
   const [hours, setHours] = useState<number>(0);
   const [isGameOver, setIsGameOver] = useState<boolean>(false);
 
-  const restartGame = () => {
+  const restartGame = useCallback(() => {
     setCards(content.map((card) => ({ ...card, isOpen: false })));
     setIsGameOver(false);
     setStartTimer(true);
@@ -27,10 +27,13 @@ function IndexPage() {
     setHours(0);
     setMinutes(0);
     setSeconds(0);
-  };
+  }, []);
+
   const addMove = () => {
     setMoves(moves + 1);
   };
+
+  /* ******************************** RENDERING ******************************* */
   return (
     <>
       <Modal
@@ -58,7 +61,6 @@ function IndexPage() {
             setMinutes={setMinutes}
             setHours={setHours}
             startTimer={startTimer}
-            isGameOver={isGameOver}
           />
           <Moves moves={moves} />
         </header>
@@ -68,6 +70,7 @@ function IndexPage() {
           hours={hours}
           minutes={minutes}
           seconds={seconds}
+          isGameOver={isGameOver}
           setCards={setCards}
           setMoves={addMove}
           setStartTimer={setStartTimer}

@@ -4,15 +4,7 @@ import "./index.scss";
 
 function App() {
   return (
-    <div
-      className="App"
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className="App">
       <IndexPage />
     </div>
   );
